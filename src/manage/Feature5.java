@@ -13,33 +13,33 @@ import java.util.List;
  * @author USE
  */
 public class Feature5 {
-    
-    public void calPercent(List<Student> list){
+
+    public void calPercent(List<Student> list) {
         System.out.println("Percentage grading");
-        int countA=0;
-        int countB=0;
-        int countC=0;
-        int countD=0;
+        int countA = 0;
+        int countB = 0;
+        int countC = 0;
+        int countD = 0;
         for (int i = 0; i < list.size(); i++) {
             Student s = list.get(i);
-            if(s.getMark() > 7.5){
+            if (s.getMark() > 7.5) {
                 countA++;
-            } else if(s.getMark() >= 6 && s.getMark() <= 7.5){
+            } else if (s.getMark() >= 6 && s.getMark() <= 7.5) {
                 countB++;
-            } else if(s.getMark() >= 4 && s.getMark() < 6){
+            } else if (s.getMark() >= 4 && s.getMark() < 6) {
                 countC++;
-            } else if(s.getMark() < 4){
+            } else if (s.getMark() < 4) {
                 countD++;
             }
         }
-        float A = (countA/list.size())*100;
-        float B = (countB/list.size())*100;
-        float C = (countC/list.size())*100;
-        float D = (countD/list.size())*100;
+        float A = ((float) countA / list.size()) * 100;
+        float B = ((float) countB / list.size()) * 100;
+        float C = ((float) countC / list.size()) * 100;
+        float D = ((float) countD / list.size()) * 100;
         System.out.println("A: " + A + "%");
         System.out.println("B: " + B + "%");
         System.out.println("C: " + C + "%");
         System.out.println("D: " + D + "%");
     }
-    
+
 }
